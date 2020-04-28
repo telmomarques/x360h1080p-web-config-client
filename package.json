@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "dist": "vue-cli-service build && zip -r dist.zip dist",
+    "dist": "vue-cli-service build && zip -r web-config-client.zip dist",
     "lint": "vue-cli-service lint",
     "debug": "vue-cli-service build --watch --mode development"
   },
