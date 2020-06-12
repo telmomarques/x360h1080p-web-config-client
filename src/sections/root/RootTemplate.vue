@@ -22,6 +22,15 @@
             </v-list-item-content>
           </v-list-item>
 
+          <v-list-item link :to="{name: 'SshSftpDashboard'}">
+            <v-list-item-icon>
+              <v-icon>mdi-console-network-outline</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>SSH / SFTP Server</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -32,7 +41,7 @@
     </v-app-bar>
 
     <v-content>
-      <slot name="content" />
+        <slot name="content" />
     </v-content>
     
   </v-app>

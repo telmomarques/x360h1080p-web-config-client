@@ -12,6 +12,7 @@
     "allowJs": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "typeRoots": ["src/types", "node_modules/@types"],
     "types": [
       "webpack-env",
       "vuetify"
@@ -37,6 +38,7 @@
   ],
   "exclude": [
     "node_modules",
-    "src/assets/js"
+    "src/assets/js",
+    "types"
   ]
 }

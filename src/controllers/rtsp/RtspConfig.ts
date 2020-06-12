@@ -9,7 +9,9 @@ export class RtspConfigDefinition {
 export default class RtspConfig extends ConfigurableHack<RtspConfigDefinition> {
 
   constructor() {
-    super(HackId.RTSPServer);
+    super({
+      hackId: HackId.RTSPServer, TCreator: RtspConfigDefinition
+    });
   }
 
 }

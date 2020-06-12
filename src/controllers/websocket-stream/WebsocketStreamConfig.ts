@@ -8,7 +8,10 @@ export class WebsocketStreamConfigDefinition {
 export default class WebsocketStreamConfig extends ConfigurableHack<WebsocketStreamConfigDefinition> {
 
   constructor() {
-    super(HackId.WebsocketStreamServer);
+    super({
+      hackId: HackId.WebsocketStreamServer,
+      TCreator: WebsocketStreamConfigDefinition
+    });
   }
 
 }

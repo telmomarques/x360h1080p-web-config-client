@@ -11,16 +11,16 @@
 
             <v-row>
               <v-col>
-                <streaming-config @saved="refresh" />
+                  <ssh-sftp-general-config />
               </v-col>
             </v-row>
 
             <v-row>
               <v-col>
-                <streaming-player ref="streamingPlayerComponent" />
+                <ssh-sftp-user-management />
               </v-col>
             </v-row>
-            
+
           </v-col>
 
         </v-row>
@@ -34,25 +34,16 @@
 import { Vue, Component } from 'vue-property-decorator';
 import { HackId } from '../../helpers/HackId';
 import RootTemplate from '../root/RootTemplate.vue';
+import ServiceInfo from '../../components/ServiceInfo.vue';
 import HackInfo from '../../components/HackInfo.vue';
-import StreamingPlayer from '../../components/StreamingPlayer.vue';
-import StreamingConfig from './StreamingConfig.vue';
+import SshSftpGeneralConfig from './SshSftpGeneralConfig.vue';
+import SshSftpUserManagement from './SshSftpUserManagement.vue';
 
 @Component({
-  components: {RootTemplate, StreamingConfig, HackInfo, StreamingPlayer}
+  components: {RootTemplate, SshSftpGeneralConfig, SshSftpUserManagement, ServiceInfo, HackInfo}
 })
-export default class StreamingDashboard extends Vue {
+export default class SshSftpDashboard extends Vue {
   private toolbarTitle = "Video Streaming";
-  private relatedHackIds = [HackId.RTSPServer, HackId.WebsocketStreamServer];
-
-  private refresh() {
-    this.reloadPreview();
-  }
-
-  private reloadPreview() {
-    window.setTimeout( () => {
-      (this.$refs.streamingPlayerComponent as StreamingPlayer).reload();
-    }, 1000);
-  }
+  private hackId = [HackId.SSHServer];
 }
 </script>
