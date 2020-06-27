@@ -20,6 +20,12 @@
                 <streaming-player ref="streamingPlayerComponent" />
               </v-col>
             </v-row>
+
+            <v-row>	
+              <v-col>	
+                <hack-info class="fill-height" :hackIds="relatedHackIds" />	
+              </v-col>	
+            </v-row>
             
           </v-col>
 
